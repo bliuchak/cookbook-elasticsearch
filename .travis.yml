@@ -3,6 +3,7 @@ language: ruby
 branches:
   only:
     - master
+    - es_v7_tests
 
 sudo: false
 
