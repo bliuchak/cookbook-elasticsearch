@@ -6,6 +6,8 @@ default['elasticsearch']['configure'] = {}
 default['elasticsearch']['service'] = {}
 default['elasticsearch']['plugin'] = {}
 
+default['elasticsearch']['install']['version'] = '6.8.1'
+
 # platform_family keyed download URLs
 default['elasticsearch']['download_urls'] = if Gem::Version.new(default['elasticsearch']['install']['version']) >= Gem::Version.new('7.0.0')
                                               {
