@@ -25,7 +25,7 @@ describe 'elasticsearch_test::tarball' do
   end
 end
 
-describe 'elasticsearch_test::tarball v7' do
+describe 'elasticsearch_test::tarball' do
   before { stub_resources }
   supported_platforms.each do |platform, versions|
     versions.each do |version|
@@ -72,7 +72,7 @@ describe 'elasticsearch_test::package' do
   end
 end
 
-describe 'elasticsearch_test::package v7' do
+describe 'elasticsearch_test::package' do
   before { stub_resources }
   supported_platforms.each do |platform, versions|
     versions.each do |version|
