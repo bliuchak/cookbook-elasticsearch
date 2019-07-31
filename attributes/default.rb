@@ -6,8 +6,6 @@ default['elasticsearch']['configure'] = {}
 default['elasticsearch']['service'] = {}
 default['elasticsearch']['plugin'] = {}
 
-default['elasticsearch']['install']['version'] = '6.8.1'
-
 # platform_family keyed download URLs
 default['elasticsearch']['download_urls'] = {
   'debian' => 'https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-%s.deb',

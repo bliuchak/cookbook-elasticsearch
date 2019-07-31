@@ -34,7 +34,6 @@ describe 'elasticsearch_test::tarball_v7' do
           ChefSpec::ServerRunner.new(platform: platform, version: version, step_into: ['elasticsearch_install']) do |node, server|
             node_resources(node) # data for this node
             stub_chef_zero(platform, version, server) # stub other nodes in chef-zero
-            # node.override['elasticsearch']['version'] = '7.0.0'
           end.converge(described_recipe)
         end
 
@@ -72,7 +71,7 @@ describe 'elasticsearch_test::package' do
   end
 end
 
-describe 'elasticsearch_test::package' do
+describe 'elasticsearch_test::package_v7' do
   before { stub_resources }
   supported_platforms.each do |platform, versions|
     versions.each do |version|
@@ -81,7 +80,6 @@ describe 'elasticsearch_test::package' do
           ChefSpec::ServerRunner.new(platform: platform, version: version, step_into: ['elasticsearch_install']) do |node, server|
             node_resources(node) # data for this node
             stub_chef_zero(platform, version, server) # stub other nodes in chef-zero
-            node.override['elasticsearch']['version'] = '7.0.0'
           end.converge(described_recipe)
         end
 
