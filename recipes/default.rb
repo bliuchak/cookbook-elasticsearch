@@ -8,10 +8,10 @@ include_recipe 'chef-sugar'
 
 # settings for download urls
 node.default['elasticsearch']['download_urls'] = if Gem::Version.new(node['elasticsearch']['install']['version']) >= Gem::Version.new('7.0.0')
-  node['elasticsearch']['version_7']['download_urls']
-else
-  node['elasticsearch']['before_6_version']['download_urls']
-end
+                                                   node['elasticsearch']['version_7']['download_urls']
+                                                 else
+                                                   node['elasticsearch']['before_6_version']['download_urls']
+                                                 end
 
 # see README.md and test/fixtures/cookbooks for more examples!
 elasticsearch_user 'elasticsearch' do
